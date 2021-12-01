@@ -5,10 +5,10 @@ jupyter:
     text_representation:
       extension: .md
       format_name: markdown
-      format_version: '1.2'
-      jupytext_version: 1.3.1
+      format_version: '1.3'
+      jupytext_version: 1.13.2
   kernelspec:
-    display_name: Python 3
+    display_name: Python 3 (ipykernel)
     language: python
     name: python3
   language_info:
@@ -20,7 +20,7 @@ jupyter:
     name: python
     nbconvert_exporter: python
     pygments_lexer: ipython3
-    version: 3.6.8
+    version: 3.7.0
   plotly:
     description: How to make 2D Histograms in Python with Plotly.
     display_as: statistical
@@ -232,6 +232,25 @@ fig.update_layout(
 
 )
 
+fig.show()
+```
+
+### Adding text to points
+
+
+In this example we show how to add text to 2D-Histogram points. We use the values from the `z` attribute for the text, and add them using the format **%{variable}**.
+
+```python
+import plotly.graph_objects as go
+from plotly import data
+
+df = data.tips()
+
+fig = go.Figure(go.Histogram2d(
+        x=df.total_bill,
+        y=df.tip,
+        texttemplate= "%{z}"
+    ))
 fig.show()
 ```
 

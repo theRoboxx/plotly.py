@@ -2,8 +2,8 @@
 
 <table>
     <tr>
-        <td>Latest Release</td>
-        <td>
+        <td>Latest Release</td> 
+        <td>   
             <a href="https://pypi.org/project/plotly/"/>
             <img src="https://badge.fury.io/py/plotly.svg"/>
         </td>
