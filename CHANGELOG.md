@@ -2,6 +2,33 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.4.0] - 2021-11-15
+
+### Fixed
+  - Fixed error when serializing dict with mix of string and non-string keys [#3380](https://github.com/plotly/plotly.py/issues/3380)
+
+### Updated
+  - The JSON serialization engines no longer sort their keys [#3380](https://github.com/plotly/plotly.py/issues/3380)
+  - Updated Plotly.js to from version 2.4.2 to version 2.6.3. See the [plotly.js CHANGELOG](https://github.com/plotly/plotly.js/blob/master/CHANGELOG.md#263----2021-11-12) for more information. Notable changes include:
+    - New subplot type `smith` that supports `scattersmith` trace types for visualizing data in the complex domain
+    - Changes to Plotly.js packaging
+
+
+## [5.3.1] - 2021-08-31
+
+### Updated
+
+- Updated Plotly.js to from version 2.4.1 to version 2.4.2. See the [plotly.js CHANGELOG](https://github.com/plotly/plotly.js/blob/master/CHANGELOG.md#240----2021-08-27) for more information. These changes are reflected in the auto-generated `plotly.graph_objects` module. Notable changes include:
+  - Bug fix for rendering unified hover labels in classic Jupyter Notebooks
+
+## [5.3.0] - 2021-08-29
+
+### Updated
+
+- Updated Plotly.js to from version 2.3.1 to version 2.4.1. See the [plotly.js CHANGELOG](https://github.com/plotly/plotly.js/blob/master/CHANGELOG.md#240----2021-08-27) for more information. These changes are reflected in the auto-generated `plotly.graph_objects` module. Notable changes include:
+  - Added `legend.groupclick` options
+  - Provide bbox of hover items in event data
+
 ## [5.2.2] - 2021-08-23
 
 ### Fixed
