@@ -5,10 +5,10 @@ jupyter:
     text_representation:
       extension: .md
       format_name: markdown
-      format_version: '1.2'
-      jupytext_version: 1.4.2
+      format_version: '1.3'
+      jupytext_version: 1.13.2
   kernelspec:
-    display_name: Python 3
+    display_name: Python 3 (ipykernel)
     language: python
     name: python3
   language_info:
@@ -20,7 +20,7 @@ jupyter:
     name: python
     nbconvert_exporter: python
     pygments_lexer: ipython3
-    version: 3.7.7
+    version: 3.7.0
   plotly:
     description: How to make Histograms in Python with Plotly.
     display_as: statistical
@@ -336,6 +336,23 @@ fig.update_layout(
     bargap=0.2, # gap between bars of adjacent location coordinates
     bargroupgap=0.1 # gap between bars of the same location coordinates
 )
+
+fig.show()
+```
+
+### Histogram Bar Text
+
+
+You can add text to histogram bars with the `texttemplate` argument. In this example we add the x-axis values as  text using the format `%{variable}`. We also adjust the size of the text using `textfont_size`.
+
+```python
+import plotly.graph_objects as go
+
+numbers = ["5", "10", "3", "10", "5", "8", "5", "5"]
+
+fig = go.Figure()
+fig.add_trace(go.Histogram(x=numbers, name="count", texttemplate="%{x}", textfont_size=20))
+
 
 fig.show()
 ```
