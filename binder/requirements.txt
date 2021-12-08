@@ -19,3 +19,4 @@ kaleido
 scikit-learn
 umap-learn
 wget
+jupyterlab-link-share
